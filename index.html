@@ -1,112 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <style>
-      *{
-         padding: 10;
-         margin: 10;
-         font-family:sans-serif;
-      }
-      body{
-         background-color: #aecb76;
-         display: grid;
-         height: 100vh;
-         place-items: center;
-      }
-      .main{
-         width: 400px;
-         height: 450px;
-         background-color: rgb(233, 224, 150);
-         position: absolute;
-         border: 10px solid black;
-         border-radius: 30px; 
-      }
-      .main input[type='text'] {
-         width: 88%;
-         position: relative;
-         height: 80px;
-         top: 5px;
-         text-align:left;
-         padding: 3px 6px;
-         outline: none;
-         font-size: 50px;
-         border: 5px solid rgb(6, 6, 6);
-         display: flex;
-         margin: auto;
-         border-radius: 20px;
-         color: rgb(13, 12, 12);
-      }
-      .btn input[type='button']{
-         width:90px;
-         padding: 2px;
-         margin: 2px 0px;
-         position: relative;
-         left: 13px;
-         top: 20px;
-         height: 60px;
-         cursor: pointer;
-         font-size: 23px;
-         transition: 1s;
-         background-color: #d8f11d;
-         border-radius: 60px;
-         color: rgb(7, 7, 7);
-      }
-      .btn input[type='button']:hover{
-         background-color: black;
-         color: rgb(234, 236, 227);
-      }
-   </style>
-   <script>
-      function Solve(val) {
-         var v = document.getElementById('res');
-         v.value += val;
-      }
-      function Result() {
-         var num1 = document.getElementById('res').value;
-         var num2 = eval(num1);
-         document.getElementById('res').value = num2;
-      }
-      function Clear() {
-         var inp = document.getElementById('res');
-         inp.value = '';
-      }
-      function Back() {
-         var ev = document.getElementById('res');
-         ev.value = ev.value.slice(0,-1);
-      }
-   </script>
-   <title>Simple Calulator</title>
-</head>
-<body>
-   <div class="main">
-      <input type="text" id = 'res'>
-      <div class="btn">
 
-         <input type="button" value = 'C' onclick = "Clear('c')">
-         <input type="button" value = '%' onclick = "Solve('%')">
-         <input type="button" value = '←' onclick ="Back('←')">
-         <input type="button" value = '/' onclick = "Solve('/')">
-         <br>
-         <input type="button" value = '7' onclick = "Solve('7')">
-         <input type="button" value = '8' onclick = "Solve('8')">
-         <input type="button" value = '9' onclick = "Solve('9')">
-         <input type="button" value = 'x' onclick = "Solve('*')">
-         <br>
-         <input type="button" value = '4' onclick = "Solve('4')">
-         <input type="button" value = '5' onclick = "Solve('5')">
-         <input type="button" value = '6' onclick = "Solve('6')">
-         <input type="button" value = '-' onclick = "Solve('-')">
-         <br>
-         <input type="button" value = '1' onclick = "Solve('1')">
-         <input type="button" value = '2' onclick = "Solve('2')">
-         <input type="button" value = '3' onclick = "Solve('3')">
-         <input type="button" value = '+' onclick = "Solve('+')">
-         <br>
-         <input type="button" value = '00'onclick = "Solve('00')">
-         <input type="button" value = '0' onclick = "Solve('0')">
-         <input type="button" value = '.' onclick = "Solve('.')">
-         <input type="button" value = '=' onclick = "Result()">
-      </div>
-   </div>
+<head>
+	<style>
+		/* Styling the body element
+		like body color and margin */
+
+		body {
+			background-color: #00e1fa60;
+			margin: 20%;
+		}
+
+		/* Styling the Title and giving
+		shadow to the title */
+		#title {
+			text-align: center;
+			text-shadow: 5px 5px 10px rgb(239, 234, 234);
+			font-size: 8vh;
+		}
+
+		/* Setting width and display
+		type of image */
+		img {
+			display:flex;
+			width: 100%;
+		}
+
+		/* Setting font color and font
+		size of the image-caption */
+		#caption {
+			font-size: 17px;
+			font-family: Gill Sans;
+			color: black;
+		}
+
+		/* Styling the content of the page like-
+		padding, font-size, font color etc.*/
+		div#tribute-data {
+			background-color: rgb(46, 139, 87, 0.25);
+			box-shadow: 20px 20px 20px #05cbee;
+			font-family: Georgia;
+			padding: 25px 25px;
+			margin: 11px;
+			margin-top: 50px;
+		}
+
+		/* Styling the title of the content */
+		h1.title-mkg {
+			font-size: 35px;
+			color: white;
+			text-align: center;
+			text-shadow: 5px 5px 10px black;
+		}
+
+		/* Styling the link provided at the end */
+		#tribute-link {
+			text-decoration: none;
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<main id="main">
+
+		<!-- Title of the page -->
+		<h1 id="title">
+			Mohandas Karamchand Gandhi
+		</h1>
+
+		<div id="img">
+
+			<!--Image of the Tribute Person-->
+			<img src="mg.jpg"
+				id="image"
+				alt="Error Loading Image">
+			<small id="caption">
+				<br><br><b>Mahatma Gandhi </b>, often referred to as the Father of the Nation in India, was a prominent leader and advocate for nonviolent civil disobedience during the Indian independence movement against British rule.
+			</small>
+		</div>
+
+		<div id="tribute-data">
+
+			<!--Achievements and other
+				details of the person-->
+			<h1 class="title-mkg">
+				About the Legend
+			</h1>
+			<p>
+				☛ <b>Early Life:</b> Mohandas Karamchand Gandhi was born on October 2, 1869, in Porbandar, Gujarat, India..<br><br>
+				☛ <b>Education and Career:</b> He studied law in London and practiced in South Africa, where he first experienced racial discrimination, sparking his activism.<br><br>
+				☛ <b>Nonviolent Resistance:</b> Gandhi developed and popularized the concept of Satyagraha, a form of nonviolent resistance and civil disobedience, which he used effectively in the struggle for Indian independence<br><br>
+				☛ <b>Salt March:</b> One of his most famous acts of civil disobedience was the Salt March in 1930, protesting against British salt monopoly in India. <br><br>
+			    ☛ <b>Philosophy of Ahimsa:</b> Gandhi's philosophy was deeply rooted in the principle of ahimsa (nonviolence), which he applied not only politically but also in his personal life and relations. <br><br>
+				☛ <b>Role in Independence:</b> He led nationwide campaigns for various social issues and was a key figure in negotiations with the British that led to India gaining independence in 1947. <br><br>
+				☛ <b>Legacy:</b> Gandhi's legacy extends beyond India. His principles of nonviolence and civil disobedience influenced civil rights movements and leaders worldwide, including Martin Luther King Jr. in the United States. <br><br>
+				☛ <b>Assassination:</b> Sadly, Gandhi was assassinated on January 30, 1948, by Nathuram Godse, a Hindu nationalist who opposed Gandhi's philosophy of tolerance towards Muslims. <br><br>
+				 <b>Gandhi's life and teachings continue to inspire movements for social justice and nonviolent resistance globally, making him a revered figure in world history.</b>
+			</p>
+
+		</div>
+		<br>
+		For more information,
+		check out
+		<a id="tribute-link" href="#">
+			<b>MAHATMA GANDHI</b> 
+		</a>on Wikipedia. [
+			<small>Developed by @<a href="#">
+					Syed Akbar Ali.</a>
+		</small>]
+	</main>
 </body>
+
 </html>
+
